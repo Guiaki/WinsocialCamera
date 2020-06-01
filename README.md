@@ -3,10 +3,13 @@ NOTA para Winsocial: O aplicativo foi feito dentre 5 horas pois estava em um mom
 Optei por agilidade em alguns momentos e diante disso há varios pontos com possiveis melhorias.
 
 Watch it working:
+
 [![Watch the video](https://img.youtube.com/vi/hK0Se_Nxb-8/hqdefault.jpg)](https://youtu.be/hK0Se_Nxb-8)
 
 Using [IMGUR API](https://api.imgur.com/oauth2/addclient) to upload images into the cloud.
+
 Using [Face-Detection6 in RapidAPI (PAID)](https://rapidapi.com/inferdo/api/face-detection6) my API Key will be available till June 5, 2020
+
 This project uses Coroutines, MVVM, Retrofit, Koin, CameraX and is written in Kotlin.
 
 # Run

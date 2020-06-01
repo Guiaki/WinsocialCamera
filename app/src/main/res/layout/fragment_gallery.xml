@@ -19,60 +19,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="@color/colorPrimary"
     android:layoutDirection="ltr">
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/photo_view_pager" />
+    <ImageButton
+        android:id="@+id/back_button"
+        android:contentDescription="@string/back_button_alt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="@dimen/margin_xsmall"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="@dimen/round_button_small"
+        android:layout_height="@dimen/round_button_small"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_back" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cutout_safe_area"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imv_image"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:contentDescription="@string/back_button_alt"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="@dimen/margin_xsmall"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_width="@dimen/round_button_small"
-            android:layout_height="@dimen/round_button_small"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_back" />
+    <TextView
+        android:id="@+id/txv_imgur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Fazendo upload da imagem..."
+        android:textSize="16sp"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="@+id/imv_image"
+        app:layout_constraintStart_toStartOf="@+id/imv_image"
+        app:layout_constraintTop_toBottomOf="@+id/imv_image" />
 
-        <ImageButton
-            android:id="@+id/share_button"
-            android:contentDescription="@string/share_button_alt"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginEnd="@dimen/margin_xlarge"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:layout_width="@dimen/round_button_small"
-            android:layout_height="@dimen/round_button_small"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_share" />
+    <TextView
+        android:id="@+id/txv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Idade: 11~22"
+        android:textSize="16sp"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imv_image"
+        app:layout_constraintStart_toStartOf="@+id/imv_image"
+        app:layout_constraintTop_toBottomOf="@+id/txv_imgur" />
 
-        <ImageButton
-            android:id="@+id/delete_button"
-            android:contentDescription="@string/delete_button_alt"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginStart="@dimen/margin_xlarge"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:layout_width="@dimen/round_button_small"
-            android:layout_height="@dimen/round_button_small"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_delete" />
+    <TextView
+        android:id="@+id/txv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genero: Masculino (75.43%)"
+        android:textSize="16sp"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imv_image"
+        app:layout_constraintStart_toStartOf="@+id/imv_image"
+        app:layout_constraintTop_toBottomOf="@+id/txv_age" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/imv_image"
+        app:layout_constraintStart_toStartOf="@+id/imv_image"
+        app:layout_constraintTop_toBottomOf="@+id/txv_imgur">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,29 +1,22 @@
-# CameraXbasic
+# Winsocial Camera Age and Gender
+NOTA para Winsocial: O aplicativo foi feito dentre 5 horas pois estava em um momento corrido, como foi enviado outro projeto para avaliação, deixei a parte de interface de lado e foquei somente em fazer funcional a Camera + Reconhecimento de idade e genero.
+Optei por agilidade em alguns momentos e diante disso há varios pontos com possiveis melhorias.
 
-CameraXbasic aims to demonstrate how to use CameraX APIs written in Kotlin.
+Watch it working:
+[![Watch the video](https://img.youtube.com/vi/hK0Se_Nxb-8/hqdefault.jpg)](https://youtu.be/hK0Se_Nxb-8)
 
-## Build
+Using [IMGUR API](https://api.imgur.com/oauth2/addclient) to upload images into the cloud.
+Using [Face-Detection6 in RapidAPI (PAID)](https://rapidapi.com/inferdo/api/face-detection6) my API Key will be available till June 5, 2020
+This project uses Coroutines, MVVM, Retrofit, Koin, CameraX and is written in Kotlin.
 
-To build the app directly from the command line, run:
-```sh
-./gradlew assembleDebug
-```
+# Run
+You can download the last stable version in Github Releases, or [click here](https://github.com/Guiaki/WinsocialCamera/releases/download/1.0/app-debug.apk)
 
-## Test
+# Build
 
-Unit testing and instrumented device testing share the same code. To test the app using Robolectric, no device required, run:
-```sh
-./gradlew test
-```
+ 1. Do a `git clone https://github.com/Guiaki/WinsocialCamera.git`
+ 2. With Android Studio installed and Android SDK configured, open the project from main folder
+ 3. After gradle sync and download dependencies, you can go to `Build > Make Project` and after that `Run > Run App`
+ 4. If you have an smartphone connected via USB with USB debugging enabled you can directly send to your smartphone.
 
-To run the same tests in an Android device connected via ADB, run:
-```sh
-./gradlew connectedAndroidTest
-```
-
-Alternatively, test running configurations can be added to Android Studio for convenience (and a nice UI). To do that:
-1. Go to: `Run` > `Edit Configurations` > `Add New Configuration`.
-1. For Robolectric select `Android JUnit`, for connected device select `Android Instrumented Tests`.
-1. Select `app` module and `com.android.example.cameraxbasic.MainInstrumentedTest` class.
-1. Optional: Give the run configuration a name, like `test robolectric` or `test device`
-"# WinsocialCamera" 
+Made by Guilherme Garcia da Rosa

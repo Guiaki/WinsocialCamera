@@ -1,4 +1,4 @@
-# Winsocial Camera Age and Gender
+# Camera Age and Gender
 NOTA para Winsocial: O aplicativo foi feito dentre 5 horas pois estava em um momento corrido, como foi enviado outro projeto para avaliação, deixei a parte de interface de lado e foquei somente em fazer funcional a Camera + Reconhecimento de idade e genero.
 Optei por agilidade em alguns momentos e diante disso há varios pontos com possiveis melhorias.
 
